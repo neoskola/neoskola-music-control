@@ -240,6 +240,12 @@ public class MusicControlNotification {
                 if (MusicControlModule.INSTANCE == null) {
                     MusicControlModule.INSTANCE.init();
                 }
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    forceForeground();
+                    return;
+                }
+
                 notification = MusicControlModule.INSTANCE.notification.prepareNotification(MusicControlModule.INSTANCE.nb, false);
                startForeground(MusicControlModule.INSTANCE.getNotificationId(), notification);
             }catch (Exception ex){
