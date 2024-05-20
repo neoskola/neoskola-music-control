@@ -7,12 +7,7 @@
     <application>
         <service
             android:name="com.tanguyantoine.react.MusicControlNotification$NotificationService"
-            android:foregroundServiceType=["camera" | "connectedDevice" |
-                                        "dataSync" | "health" | "location" |
-                                        "mediaPlayback" | "mediaProjection" |
-                                        "microphone" | "phoneCall" |
-                                        "remoteMessaging" | "shortService" |
-                                        "specialUse" | "systemExempted"]
+            android:foregroundServiceType="mediaPlayback"
             android:stopWithTask="true" />
     </application>
 
